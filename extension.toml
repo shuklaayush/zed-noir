@@ -1,0 +1,15 @@
+id = "noir"
+name = "Noir"
+description = "Noir support."
+version = "0.0.1"
+schema_version = 1
+authors = ["Ayush Shukla <ayush@shuklaayu.sh>"]
+repository = "https://github.com/shuklaayush/zed-noir"
+
+[language_servers.nargo]
+name = "nargo lsp"
+language = "Noir"
+
+[grammars.noir]
+repository = "https://github.com/hhamud/tree-sitter-noir"
+commit = "4cc223f677d72db319f1c8331b65a9564805c7bf"
