@@ -11,5 +11,5 @@ name = "Noir Language Server"
 languages = ["Noir"]
 
 [grammars.noir]
-repository = "https://github.com/hhamud/tree-sitter-noir"
-rev = "4cc223f677d72db319f1c8331b65a9564805c7bf"
+repository = "file:///home/franco/Documents/agents/noir-zed-lab/tree-sitter-noir"
+rev = "20b83e0cef546e454aed44cec5c403235fb848aa"
