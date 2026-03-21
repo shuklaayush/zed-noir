@@ -12,4 +12,4 @@ languages = ["Noir"]
 
 [grammars.noir]
 repository = "https://github.com/hhamud/tree-sitter-noir"
-rev = "4305108b46a1157f70040f9fcd4436994c5edc2b"
+rev = "2256df2be2d45b7c92d11927734d0547fd08af5f"
