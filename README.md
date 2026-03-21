@@ -10,11 +10,11 @@ This extension now has a working local development loop with:
 
 ## Workspace Layout
 
-- [`languages/noir/config.toml`](/home/franco/Documents/agents/noir-zed-lab/zed-noir/languages/noir/config.toml)
-- [`languages/noir/highlights.scm`](/home/franco/Documents/agents/noir-zed-lab/zed-noir/languages/noir/highlights.scm)
-- [`languages/noir/outline.scm`](/home/franco/Documents/agents/noir-zed-lab/zed-noir/languages/noir/outline.scm)
-- [`extension.toml`](/home/franco/Documents/agents/noir-zed-lab/zed-noir/extension.toml)
-- [`src/lib.rs`](/home/franco/Documents/agents/noir-zed-lab/zed-noir/src/lib.rs)
+- `languages/noir/config.toml`
+- `languages/noir/highlights.scm`
+- `languages/noir/outline.scm`
+- `extension.toml`
+- `src/lib.rs`
 
 The extension currently points at the local `tree-sitter-noir` repository during
 development.
@@ -24,14 +24,14 @@ development.
 Extension validation:
 
 ```bash
-cd /home/franco/Documents/agents/noir-zed-lab/zed-noir
+cd zed-noir
 cargo check
 ```
 
 Grammar validation:
 
 ```bash
-cd /home/franco/Documents/agents/noir-zed-lab/tree-sitter-noir
+cd ../tree-sitter-noir
 tree-sitter generate
 tree-sitter test
 tree-sitter parse examples/simple.nr
@@ -56,7 +56,7 @@ There are two separate WASM artifacts:
 1. The extension runtime:
 
 ```bash
-cd /home/franco/Documents/agents/noir-zed-lab/zed-noir
+cd zed-noir
 cargo build --release --target wasm32-wasip2
 cp target/wasm32-wasip2/release/zed_noir.wasm extension.wasm
 ```
@@ -64,9 +64,9 @@ cp target/wasm32-wasip2/release/zed_noir.wasm extension.wasm
 2. The tree-sitter grammar:
 
 ```bash
-cd /home/franco/Documents/agents/noir-zed-lab/tree-sitter-noir
+cd ../tree-sitter-noir
 tree-sitter build --wasm
-cp tree-sitter-noir.wasm /home/franco/Documents/agents/noir-zed-lab/zed-noir/grammars/noir.wasm
+cp tree-sitter-noir.wasm ../zed-noir/grammars/noir.wasm
 ```
 
 Important:
@@ -109,7 +109,7 @@ Likely area:
 Check:
 
 - confirm `extension.wasm` was built from `wasm32-wasip2`
-- run `zeditor --foreground /home/franco/Documents/agents/noir-zed-lab/firma/src/main.nr`
+- run `zeditor --foreground path/to/file.nr`
 - look for a foreground log line like:
 
 ```text
@@ -159,7 +159,7 @@ Use this split:
 
 The primary local Noir project used for validation is:
 
-- [`firma/src/main.nr`](/home/franco/Documents/agents/noir-zed-lab/firma/src/main.nr)
+- `../firma/src/main.nr`
 
 It is useful for checking:
 
