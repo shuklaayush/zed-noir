@@ -1,0 +1,4 @@
+[package]
+name = "semantic_fixture"
+type = "bin"
+authors = [""]
